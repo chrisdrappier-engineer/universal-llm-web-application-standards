@@ -25,8 +25,6 @@
 - **AI-EXECUTION-002 (must):** A request to analyze does not authorize code changes; a request to implement
   includes the coherent changes and verification needed to finish the work.
 - **AI-EXECUTION-003 (should):** Existing conventions should be preferred when they satisfy the requirement.
-- **AI-EXECUTION-004 (should):** Related changes across code, tests, fixtures, configuration, and documentation
-  should be completed as one coherent unit.
 - **AI-EXECUTION-005 (must):** Unrelated files and user changes must be preserved.
 
 ## Decisions and Traceability

@@ -89,7 +89,8 @@
 
 - **UX-VISUAL-001 (must):** Established visual design rules must be recorded in
   a maintained visual-rules document that identifies their scope, rationale,
-  actionable requirements, examples, known exceptions, and adoption status.
+  expected behavior, relevant states, implementation implications, actionable
+  requirements, useful examples or references, known exceptions, and adoption status.
 - **UX-VISUAL-002 (must):** Before a visual rule is added or changed after UX
   implementation has begun, the project must assess affected screens and
   components, existing inconsistencies, migration strategy, verification needs,
@@ -112,9 +113,6 @@
 - **UX-DISCOVERY-003 (must):** The agent must ask only for decisions required by
   the current work and must update the visual-rules document as those decisions
   are made.
-- **UX-DISCOVERY-004 (must):** Each codified visual rule must define its scope,
-  expected behavior, relevant states, examples or references when useful, and
-  implementation implications.
 - **UX-DISCOVERY-005 (must):** A user-requested UI change during iteration must
   be treated as a general rule for subsequent work in the same component,
   workflow, or visual context unless the user explicitly identifies it as an

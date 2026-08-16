@@ -11,8 +11,12 @@ LLM product.
 - [Adoption and Local Overrides](standards/local-overrides.md)
 - [AI-Assisted Development](standards/ai-workflow.md)
 - [Application Implementation](standards/implementation.md)
+- [Dependency Selection](standards/dependencies.md)
+- [macOS Development](standards/macos.md)
+- [Docker](standards/docker.md)
 - [User Experience](standards/user-experience.md)
 - [Quality and Verification](standards/quality.md)
+- [Standards Review Log](standards/review-log.md)
 
 ## Adoption
 

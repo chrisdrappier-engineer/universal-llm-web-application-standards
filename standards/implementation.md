@@ -23,8 +23,6 @@
 ## Contextual Workflows
 
 - **IMPL-CONTEXT-001 (should):** Actions should begin from the richest safe context available.
-- **IMPL-CONTEXT-002 (should):** Known values should be prefilled, valid options narrowed, redundant inputs
-  removed, and inferred context displayed for confirmation.
 - **IMPL-CONTEXT-003 (should):** Contextual entry points should be preferred when
   they reduce ambiguity or invalid choices; global entry points may remain as
   fallbacks.
@@ -40,16 +38,15 @@
   dataset is present and the behavior is explicitly designed for it.
 - **IMPL-COLLECTION-004 (must):** Searchable, filterable, and sortable fields must be allowlisted; request input
   must not directly define queries or executable expressions.
-- **IMPL-COLLECTION-005 (should):** Shareable interface state should use stable URL parameters when practical.
-  Changes that can shrink a result set should reset invalid pagination state.
+- **IMPL-COLLECTION-005 (should):** Changes that can shrink a result set should reset invalid pagination state.
 
 ## Consistency and Reuse
 
+- **IMPL-CONSISTENCY-005 (must):** Until a human approves another product name, placeholder product names must
+  be derived only by case-converting the name of the containing project directory.
 - **IMPL-CONSISTENCY-001 (should):** Repeated interaction patterns should use shared abstractions with declarative
   configuration and safe defaults.
 - **IMPL-CONSISTENCY-002 (should):** Abstractions should hide replaceable implementation details without obscuring
   domain behavior.
 - **IMPL-CONSISTENCY-003 (should):** User-visible changes should include representative development or demo data
   when such data is necessary to exercise the workflow meaningfully.
-- **IMPL-CONSISTENCY-004 (must):** Accessibility, responsive behavior, error states, loading states, and empty
-  states are part of implementation, not optional polish.

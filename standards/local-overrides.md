@@ -1,6 +1,6 @@
 # Adoption and Local Overrides
 
-Place `.standards.yml` at the root of an adopting repository:
+- **ADOPT-CONFIG-001 (must):** An adopting repository must place `.standards.yml` at its root.
 
 ```yaml
 standard:
@@ -8,10 +8,10 @@ standard:
   version: "1.0.0"
 
 overrides:
-  - rule: "UX-ACCESS-002"
+  - rule: "UX-RESPONSIVE-003"
     action: "disable"
     scope: "/"
-    reason: "The kiosk interface does not accept keyboard input."
+    reason: "The fixed wall display has no touch input."
     owner: "product-platform"
     review_on: "2027-01-15"
 
@@ -49,15 +49,18 @@ rules:
     reason: "Contractual data-residency requirement."
 ```
 
-Local rule IDs must begin with `LOCAL-`, follow the universal rule format, and
-must not impersonate or redefine a universal rule.
+- **ADOPT-LOCAL-001 (must):** Local rule IDs must begin with `LOCAL-`.
+- **ADOPT-LOCAL-002 (must):** Local rules must follow the universal rule format.
+- **ADOPT-LOCAL-003 (must):** Local rules must not impersonate or redefine a universal rule.
 
 ## Validation and Review
 
-Projects should validate `.standards.yml` in CI and produce the effective rules
-for each applicable scope. Expired overrides are invalid. Review dates are
-advisory but should be reported when overdue.
+- **ADOPT-VALIDATE-001 (should):** Projects should validate `.standards.yml` in CI.
+- **ADOPT-VALIDATE-002 (should):** Projects should produce the effective rules for each applicable scope.
+- **ADOPT-VALIDATE-003 (must):** Expired overrides must be rejected as invalid.
+- **ADOPT-VALIDATE-004 (should):** Overdue advisory review dates should be reported.
 
-When a universal rule changes, the adopting project should revalidate all
-targeted overrides. An override remains attached to its stable rule ID but must
-be reviewed if the rule's meaning or requirement level changes.
+- **ADOPT-REVIEW-001 (should):** When a universal rule changes, an adopting project should revalidate every
+  override targeting it.
+- **ADOPT-REVIEW-002 (must):** An override must be reviewed when its target rule's meaning or requirement
+  level changes.
