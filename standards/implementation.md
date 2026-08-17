@@ -1,5 +1,18 @@
 # Application Implementation Standard
 
+## Code Comments
+
+- **IMPL-COMMENT-001 (must):** Code comments must follow the universally accepted comment-formatting standard
+  for the implementation language when one exists.
+- **IMPL-COMMENT-002 (must):** When an implementation language has multiple competing comment-formatting
+  standards and the project has not established one, one standard must be explicitly selected before comments
+  are added.
+- **IMPL-COMMENT-003 (must):** Code comments must communicate meaningful context rather than reiterate names or
+  behavior that are evident from the code.
+- **IMPL-COMMENT-004 (must):** Code comments must use clear narrative prose written for human readers.
+- **IMPL-COMMENT-005 (must):** `TODO` and `FIXME` comments must not be used; required follow-up work must instead
+  be completed in the current change or tracked in the project's designated issue system.
+
 ## Separation of Concerns
 
 - **IMPL-SEPARATION-001 (should):** Presentation code should describe structure and display prepared state; it

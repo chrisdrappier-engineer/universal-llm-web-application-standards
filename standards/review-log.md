@@ -1,5 +1,13 @@
 # Standards Review Log
 
+## 2026-08-17: Code Commenting
+
+- Added `IMPL-COMMENT-001` through `IMPL-COMMENT-005`, governing comment formatting, content, human-readable
+  prose, and follow-up work tracking.
+- Reviewed `AI-CONTEXT-001`, `AI-EXECUTION-005`, `QUALITY-DONE-001`, and `QUALITY-CI-004`.
+- Existing rules govern repository documentation, change scope, completion, and artifact traceability; the new
+  rules govern comments embedded in source code. No conflict or redundant obligation found.
+
 ## 2026-08-16: Docker Environments and Dependency Governance
 
 - Added `DOCKER-DEPS-002` through `DOCKER-DEPS-004` and `DOCKER-ENV-001` through `DOCKER-ENV-010`.
