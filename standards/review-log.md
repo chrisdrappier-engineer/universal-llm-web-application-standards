@@ -1,5 +1,16 @@
 # Standards Review Log
 
+## 2026-08-17: Code Readability and Narrative Flow
+
+- Added `IMPL-READABILITY-001` through `IMPL-READABILITY-005`, prioritizing comprehensible control flow,
+  narrative organization, explicit operations, and evidence-backed performance compromises.
+- Reviewed `IMPL-COMMENT-003`, `IMPL-COMMENT-004`, `IMPL-SEPARATION-001` through
+  `IMPL-SEPARATION-003`, `IMPL-CONSISTENCY-001`, `IMPL-CONSISTENCY-002`, `QUALITY-TEST-001`, and
+  `QUALITY-DONE-001`.
+- Existing comment rules govern explanatory prose, separation rules govern architectural boundaries,
+  consistency rules govern reuse, and quality rules govern verification. The new rules govern source-level
+  readability and the justification of readability compromises; no conflict or duplicate obligation found.
+
 ## 2026-08-17: Public Standards Source
 
 - Added `ADOPT-SOURCE-001`, requiring adopting projects to use the hardcoded public GitHub origin rather than

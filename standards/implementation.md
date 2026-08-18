@@ -23,6 +23,20 @@
 - **IMPL-SEPARATION-003 (should):** Components and services should have focused responsibilities and stable,
   testable interfaces.
 
+## Code Readability and Narrative Flow
+
+- **IMPL-READABILITY-001 (should):** Code should prioritize comprehension through intention-revealing names,
+  cohesive units, clear control flow, and a top-to-bottom organization that presents operations in the order
+  a reader needs to understand them.
+- **IMPL-READABILITY-002 (should):** Guard clauses, named intermediate values, named domain operations, and
+  focused functions should be preferred when they make behavior or data flow easier to follow.
+- **IMPL-READABILITY-003 (should):** Code should not be compressed into dense expressions or generalized behind
+  abstractions merely to reduce line count or eliminate superficial repetition.
+- **IMPL-READABILITY-004 (must):** A readability compromise justified by performance must be supported by a
+  representative benchmark or profile demonstrating a material benefit for the affected workload.
+- **IMPL-READABILITY-005 (must):** Unavoidably non-obvious performance-sensitive code must document the reason
+  for its structure, the constraint it addresses, and the evidence needed to reevaluate it safely.
+
 ## Server Authority and Trust Boundaries
 
 - **IMPL-TRUST-001 (must):** The server must remain authoritative for authorization, validation, persisted
