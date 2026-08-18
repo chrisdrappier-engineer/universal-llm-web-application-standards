@@ -1,5 +1,13 @@
 # Standards Review Log
 
+## 2026-08-17: Public Standards Source
+
+- Added `ADOPT-SOURCE-001`, requiring adopting projects to use the hardcoded public GitHub origin rather than
+  discovering an origin or referencing a local filesystem source.
+- Reviewed `ADOPT-CONFIG-001`, `SPEC-VERSION-001`, `SPEC-VERSION-002`, and `SPEC-CONFORMANCE-001`.
+- The new rule governs source location; the existing rules govern configuration placement and version pinning.
+  No conflict or redundant obligation found.
+
 ## 2026-08-17: Code Commenting
 
 - Added `IMPL-COMMENT-001` through `IMPL-COMMENT-005`, governing comment formatting, content, human-readable

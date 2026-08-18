@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ $# -ne 1 || -z "$1" ]]; then
+  echo "Usage: $0 <commit-message>" >&2
+  exit 64
+fi
+
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root"
+
+git add -A
+
+if git diff --cached --quiet; then
+  echo "No staged changes to commit." >&2
+  exit 1
+fi
+
+git commit -m "$1"
+
+echo "Last 5 tags:"
+recent_tags="$(git tag --sort=-version:refname | sed -n '1,5p')"
+if [[ -n "$recent_tags" ]]; then
+  echo "$recent_tags"
+else
+  echo "(none)"
+fi
+
+read -r -p "Next tag: " next_tag
+
+if [[ -z "$next_tag" ]]; then
+  echo "Tag must not be empty." >&2
+  exit 1
+fi
+
+if ! git check-ref-format "refs/tags/$next_tag" >/dev/null; then
+  echo "Invalid tag: $next_tag" >&2
+  exit 1
+fi
+
+if git rev-parse --verify --quiet "refs/tags/$next_tag" >/dev/null; then
+  echo "Tag already exists: $next_tag" >&2
+  exit 1
+fi
+
+git tag "$next_tag" HEAD
+git push --atomic origin HEAD "refs/tags/$next_tag"

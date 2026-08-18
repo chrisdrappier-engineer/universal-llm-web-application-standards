@@ -4,8 +4,8 @@
 
 ```yaml
 standard:
-  source: "https://example.com/universal-standards"
-  version: "1.0.0"
+  source: "https://github.com/chrisdrappier-engineer/universal-llm-web-application-standards.git"
+  version: "0.4.0"
 
 overrides:
   - rule: "UX-RESPONSIVE-003"
@@ -35,6 +35,9 @@ overrides:
 - `reason` explains why the universal rule does not fit.
 - `text` is required for `replace` and `strengthen`.
 - `owner`, `review_on`, and `expires` are optional governance metadata.
+
+- **ADOPT-SOURCE-001 (must):** `standard.source` must be
+  `https://github.com/chrisdrappier-engineer/universal-llm-web-application-standards.git`.
 
 ## Local Project Rules
 
