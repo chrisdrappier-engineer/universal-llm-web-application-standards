@@ -1,5 +1,16 @@
 # Standards Review Log
 
+## 2026-08-17: Namespace Specificity
+
+- Added `IMPL-NAMESPACE-001` through `IMPL-NAMESPACE-005`, defining semantic vocabulary and ordering for
+  namespace fragments independently of identifier typography and requiring documentation for reusable project
+  vocabulary.
+- Reviewed `IMPL-READABILITY-001` through `IMPL-READABILITY-003`, `IMPL-COMMENT-003`,
+  `IMPL-CONSISTENCY-001`, `IMPL-CONSISTENCY-002`, and `SPEC-FORMAT-003`.
+- Existing readability rules govern source comprehension, comment rules govern explanatory context,
+  consistency rules govern reusable abstractions, and the specification governs independently overrideable
+  requirements. The new rules govern identifier semantics; no conflict or duplicate obligation found.
+
 ## 2026-08-17: Code Readability and Narrative Flow
 
 - Added `IMPL-READABILITY-001` through `IMPL-READABILITY-005`, prioritizing comprehensible control flow,

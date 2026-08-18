@@ -37,6 +37,23 @@
 - **IMPL-READABILITY-005 (must):** Unavoidably non-obvious performance-sensitive code must document the reason
   for its structure, the constraint it addresses, and the evidence needed to reevaluate it safely.
 
+## Namespace Specificity
+
+A namespace fragment is a semantic word or phrase within an identifier, independent of the typography,
+capitalization, or separator used to join it to other fragments.
+
+- **IMPL-NAMESPACE-001 (should):** Namespace fragments should use established domain vocabulary and should
+  express business meaning before implementation mechanism.
+- **IMPL-NAMESPACE-002 (should):** Namespace fragments should be ordered from broad domain to narrower subject,
+  then role or action, then qualifier when those concepts are present in the same identifier.
+- **IMPL-NAMESPACE-003 (should):** An identifier should omit fragments whose meaning is already established by
+  its enclosing namespace unless retaining them prevents material ambiguity.
+- **IMPL-NAMESPACE-004 (should):** Vague fragments such as `data`, `item`, `manager`, `helper`, and `util` should
+  not be introduced unless the project gives them a documented, precise meaning.
+- **IMPL-NAMESPACE-005 (must):** A new fragment that establishes project vocabulary or is intended for reuse
+  across scopes must be documented before that reuse, including its definition, intended scope, relationship
+  to existing fragments, ordering convention, representative examples, and disallowed near-synonyms.
+
 ## Server Authority and Trust Boundaries
 
 - **IMPL-TRUST-001 (must):** The server must remain authoritative for authorization, validation, persisted
