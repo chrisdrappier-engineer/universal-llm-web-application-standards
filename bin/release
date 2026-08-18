@@ -10,15 +10,6 @@ fi
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
-git add -A
-
-if git diff --cached --quiet; then
-  echo "No staged changes to commit." >&2
-  exit 1
-fi
-
-git commit -m "$1"
-
 echo "Last 5 tags:"
 recent_tags="$(git tag --sort=-version:refname | sed -n '1,5p')"
 if [[ -n "$recent_tags" ]]; then
@@ -34,6 +25,11 @@ if [[ -z "$next_tag" ]]; then
   exit 1
 fi
 
+if [[ ! "$next_tag" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  echo "Tag must be a semantic version such as 0.4.0." >&2
+  exit 1
+fi
+
 if ! git check-ref-format "refs/tags/$next_tag" >/dev/null; then
   echo "Invalid tag: $next_tag" >&2
   exit 1
@@ -44,5 +40,19 @@ if git rev-parse --verify --quiet "refs/tags/$next_tag" >/dev/null; then
   exit 1
 fi
 
+if [[ ! -f VERSION ]]; then
+  echo "VERSION file not found at repository root." >&2
+  exit 1
+fi
+
+printf '%s\n' "$next_tag" > VERSION
+git add -A
+
+if git diff --cached --quiet; then
+  echo "No staged changes to commit." >&2
+  exit 1
+fi
+
+git commit -m "$1"
 git tag "$next_tag" HEAD
 git push --atomic origin HEAD "refs/tags/$next_tag"
