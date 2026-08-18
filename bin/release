@@ -11,7 +11,7 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 echo "Last 5 tags:"
-recent_tags="$(git tag --sort=-version:refname | sed -n '1,5p')"
+recent_tags="$(git tag --sort=-version:refname | sed -n '1,5p' | awk '{ tags[NR] = $0 } END { for (i = NR; i >= 1; i--) print tags[i] }')"
 if [[ -n "$recent_tags" ]]; then
   echo "$recent_tags"
 else
